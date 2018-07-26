@@ -1,0 +1,255 @@
+body {
+  font-family: 'Poppins', sans-serif; }
+
+h1, h2, h3, h4 {
+  margin: 0; }
+
+img {
+  max-width: 100%; }
+
+[class^="icon-"]::before, [class*="icon-"]::before {
+  position: relative;
+  top: .14em;
+  margin-right: .3em; }
+
+.header {
+  position: relative; }
+  .header__top {
+    min-height: 37px;
+    background-color: #474747;
+    color: #FFF; }
+    .header__top .flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+    .header__top i {
+      color: #1988ba; }
+  .header__email, .header__phone {
+    margin-right: 1.5em;
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .header__fb {
+    margin-right: 1.5em;
+    font-size: 1.8em;
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .header__es, .header__en {
+    margin-right: .5em;
+    display: block;
+    height: 22px;
+    padding: 0 .5em;
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .header__es {
+    background-color: #1988ba;
+    color: #FFF; }
+  .header__en {
+    background-color: #FFF;
+    color: #474747; }
+  .header__menu {
+    background-color: #FFF; }
+    .header__menu .flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .header__logo__wrap {
+    position: absolute;
+    top: 0;
+    max-width: 200px;
+    text-align: center;
+    z-index: 1; }
+  .header__logo span {
+    display: block;
+    font-weight: 300;
+    padding-top: 8px;
+    color: #FFF; }
+  .header__nav {
+    width: 40%; }
+    .header__nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .header__nav ul li {
+        list-style: none; }
+        .header__nav ul li a {
+          font-size: 16px;
+          font-weight: 600; }
+
+.home__banner {
+  background-image: url("img/banner-01.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 70vh;
+  position: relative; }
+  .home__banner::before {
+    position: absolute;
+    background-image: url("img/ola.svg");
+    bottom: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 105%;
+    z-index: 1; }
+  .home__banner::after {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0; }
+  .home__banner__title {
+    position: relative;
+    max-width: 650px;
+    font-size: 50px;
+    padding: 10% 0 0 50px;
+    color: #FFF;
+    z-index: 1;
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5); }
+    .home__banner__title span {
+      display: block;
+      font-size: 30px; }
+
+.home__services {
+  position: relative;
+  margin-top: -250px;
+  z-index: 1; }
+
+.home__items__title {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 10px 0; }
+  .home__items__title--trans {
+    padding: 27px; }
+
+.home__items__img {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 222px; }
+  .home__items__img::before {
+    position: absolute;
+    background-image: url("img/ola.svg");
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 106%; }
+  .home__items__img--1 {
+    background-image: url("img/servicio-01.jpg"); }
+    .home__items__img--1::before {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: 1; }
+    .home__items__img--1::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      z-index: 2;
+      opacity: .5;
+      background-image: url("img/icon-01.png"); }
+  .home__items__img--2 {
+    background-image: url("img/servicio-02.jpg"); }
+    .home__items__img--2::before {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: 1; }
+    .home__items__img--2::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      z-index: 2;
+      opacity: .5;
+      background-image: url("img/icon-02.png"); }
+  .home__items__img--3 {
+    background-image: url("img/servicio-03.jpg"); }
+    .home__items__img--3::before {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: 1; }
+    .home__items__img--3::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      z-index: 2;
+      opacity: .5;
+      background-image: url("img/icon-03.png"); }
+  .home__items__img--4 {
+    background-image: url("img/servicio-04.jpg"); }
+    .home__items__img--4::before {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: 1; }
+    .home__items__img--4::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      z-index: 2;
+      opacity: .5;
+      background-image: url("img/icon-04.png"); }
+
+.pie {
+  padding: .5em; }
+  .pie > .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .pie__title {
+    font-weight: 400;
+    font-size: 30px;
+    color: #1988ba;
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding-left: 2em; }
+  .pie__icons {
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding-right: 2em; }
