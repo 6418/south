@@ -9,6 +9,9 @@ h1,h2,h3,h4{
 img{
     max-width: 100%;
 }
+a{
+    text-decoration: none !important;
+}
 [class^="icon-"]::before,[class*="icon-"]::before{
 	position: relative;
 	top: .14em;
@@ -103,6 +106,9 @@ img{
                 a{
                     font-size: 16px;
                     font-weight: 600;
+                    &:hover{
+                        color: $black;
+                    }
                 }
             }
         }

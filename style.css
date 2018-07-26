@@ -7,6 +7,9 @@ h1, h2, h3, h4 {
 img {
   max-width: 100%; }
 
+a {
+  text-decoration: none !important; }
+
 [class^="icon-"]::before, [class*="icon-"]::before {
   position: relative;
   top: .14em;
@@ -83,6 +86,8 @@ img {
         .header__nav ul li a {
           font-size: 16px;
           font-weight: 600; }
+          .header__nav ul li a:hover {
+            color: #474747; }
 
 .home__banner {
   background-image: url("img/banner-01.jpg");
