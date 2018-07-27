@@ -17,7 +17,7 @@ a{
 	top: .14em;
 	margin-right: .3em;
 }
-@mixin sombraCapa {
+@mixin sombraCapa() {
     position: absolute;
     background-color: rgba(black, .5);
     content: '';
@@ -26,7 +26,7 @@ a{
     top: 0;
     z-index: 1;
 }
-@mixin iconHome {
+@mixin iconHome() {
     position: absolute;
     content: '';
     width: 100%;
@@ -43,28 +43,61 @@ a{
         .flex{
             display: flex;
             justify-content: flex-end;
+            @media (max-width:991px){
+                // flex-direction: row-reverse;
+                display: block;
+                width: 160px;
+                float: right;
+                text-align: center;
+                padding-top: 12px;
+            }
         }
         background-color: $black;
         color: #FFF;
         i{
             color: $blue;
         }
+        @media (max-width:991px){
+            height: 80px;;
+        }
     }
     &__email, &__phone{
         margin-right: 1.5em;
         align-self: center;
     }
+    &__phone{
+        @media (max-width:991px){
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+    }
+    &__email{
+        @media (max-width:991px){
+            display: none;
+        }
+    }
     &__fb{
         margin-right: 1.5em;
         font-size: 1.8em;
         align-self: center;
+        i{
+            transition: 1s color ease 0s;
+        }
+        &:hover i{
+            color: #FFF;
+        }
+        @media (max-width:991px){
+            display: none;
+        }
     }
-    &__es, &__en{
+    &__es,
+    &__en{
         margin-right: .5em;
-        display: block;
+        display: inline-block;
         height: 22px;
         padding: 0 .5em;
         align-self: center;
+        width: 30px;
     }
     &__es{
         background-color: $blue;
@@ -94,10 +127,19 @@ a{
             font-weight: 300;
             padding-top: 8px;
             color: #FFF;
+            @media (max-width:991px){
+                display: none;
+            }
         }
     }
     &__nav{
         width: 40%;
+        #btnMovil{
+			display: none;
+			& + label{
+				display: none;
+			}
+		}
         ul{
             display: flex;
             justify-content: space-between;
@@ -153,6 +195,13 @@ a{
             span{
                 display: block;
                 font-size: 30px;
+                @media (max-width:991px){
+                    font-size: 16px;
+                }
+            }
+            @media (max-width:991px){
+                font-size: 20px;
+                padding: 100px 0 0 50px;
             }
         }
     }
@@ -160,8 +209,19 @@ a{
         position: relative;
         margin-top: -250px;
         z-index: 1;
+        @media (max-width:991px){
+            margin-top: -200px;
+        }
     }
     &__items{
+        display: block;
+        transition: .5s transform ease 0s;
+        &:hover .home__items__img::after{
+            transform: scale(1.1);
+        }
+        &:hover{
+            transform: translateY(-10px);
+        }
         &__title{
             background-color: rgba(black, .5);
             color: #FFF;
@@ -189,6 +249,10 @@ a{
                 background-repeat: no-repeat;
                 background-position: bottom;
                 background-size: 106%;
+            }
+            &::after{
+                transition: all ease 1s;
+                transition: 1s transform ease 0s;
             }
             &--1{
                 background-image: url('img/servicio-01.jpg');
@@ -250,4 +314,59 @@ a{
         align-self: center;
         padding-right: 2em;
     }
+}
+@media (max-width:991px){
+    .header{
+		#btnMovil + label{
+			display: block !important;
+		    background-color: #FFF;
+		    box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.8);
+		    width: 60px;
+		    height: 60px;
+		    border-radius: 50%;
+		    padding: 15px 15px;
+		    position: fixed;
+		    bottom: 4rem;
+		    z-index: 3;
+		    right: 1.5rem;
+		    font-size: 2em;
+			img{
+				display: block;
+				margin: .1em auto;
+				// width: 30px;
+			}
+			&:hover{
+				cursor: pointer;
+			}
+		}
+		&__nav{
+			ul{
+				flex-direction: column;
+				position: fixed;
+				width: 150px;
+				right: -50%;
+				z-index: 2;
+				transition: all .5s;
+				bottom: 9rem;
+				li{
+					border-right: 0 !important;
+					display: block;
+					&:nth-child(1){
+						border-left: 0 !important;
+					}
+				    a{
+				    	padding: 1.25rem !important;
+						text-transform: capitalize !important;
+				    }
+				}
+			}
+		}
+		#btnMovil:checked ~ ul{
+			background-color: white;
+			cursor: pointer;
+			right: 1rem;
+			box-shadow: 2px 4px 40px 0px rgba(black,.7);
+			overflow: auto;
+		}
+	}
 }

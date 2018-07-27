@@ -28,24 +28,51 @@ a {
       -webkit-box-pack: end;
       -ms-flex-pack: end;
       justify-content: flex-end; }
+      @media (max-width: 991px) {
+        .header__top .flex {
+          display: block;
+          width: 160px;
+          float: right;
+          text-align: center;
+          padding-top: 12px; } }
     .header__top i {
       color: #1988ba; }
+    @media (max-width: 991px) {
+      .header__top {
+        height: 80px; } }
   .header__email, .header__phone {
     margin-right: 1.5em;
     -ms-flex-item-align: center;
     align-self: center; }
+  @media (max-width: 991px) {
+    .header__phone {
+      font-size: 1.2em;
+      margin-bottom: 10px; } }
+  @media (max-width: 991px) {
+    .header__email {
+      display: none; } }
   .header__fb {
     margin-right: 1.5em;
     font-size: 1.8em;
     -ms-flex-item-align: center;
     align-self: center; }
+    .header__fb i {
+      -webkit-transition: 1s color ease 0s;
+      -o-transition: 1s color ease 0s;
+      transition: 1s color ease 0s; }
+    .header__fb:hover i {
+      color: #FFF; }
+    @media (max-width: 991px) {
+      .header__fb {
+        display: none; } }
   .header__es, .header__en {
     margin-right: .5em;
-    display: block;
+    display: inline-block;
     height: 22px;
     padding: 0 .5em;
     -ms-flex-item-align: center;
-    align-self: center; }
+    align-self: center;
+    width: 30px; }
   .header__es {
     background-color: #1988ba;
     color: #FFF; }
@@ -72,8 +99,15 @@ a {
     font-weight: 300;
     padding-top: 8px;
     color: #FFF; }
+    @media (max-width: 991px) {
+      .header__logo span {
+        display: none; } }
   .header__nav {
     width: 40%; }
+    .header__nav #btnMovil {
+      display: none; }
+      .header__nav #btnMovil + label {
+        display: none; }
     .header__nav ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -125,118 +159,149 @@ a {
     .home__banner__title span {
       display: block;
       font-size: 30px; }
+      @media (max-width: 991px) {
+        .home__banner__title span {
+          font-size: 16px; } }
+    @media (max-width: 991px) {
+      .home__banner__title {
+        font-size: 20px;
+        padding: 100px 0 0 50px; } }
 
 .home__services {
   position: relative;
   margin-top: -250px;
   z-index: 1; }
+  @media (max-width: 991px) {
+    .home__services {
+      margin-top: -200px; } }
 
-.home__items__title {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #FFF;
-  font-size: 22px;
-  text-align: center;
-  font-weight: 500;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  padding: 10px 0; }
-  .home__items__title--trans {
-    padding: 27px; }
-
-.home__items__img {
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 222px; }
-  .home__items__img::before {
-    position: absolute;
-    background-image: url("img/ola.svg");
-    content: '';
-    width: 100%;
-    height: 100%;
+.home__items {
+  display: block;
+  -webkit-transition: .5s transform ease 0s;
+  -o-transition: .5s transform ease 0s;
+  transition: .5s transform ease 0s; }
+  .home__items:hover .home__items__img::after {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+  .home__items:hover {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  .home__items__title {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px 0; }
+    .home__items__title--trans {
+      padding: 27px; }
+  .home__items__img {
+    position: relative;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 106%; }
-  .home__items__img--1 {
-    background-image: url("img/servicio-01.jpg"); }
-    .home__items__img--1::before {
+    background-position: center center;
+    height: 222px; }
+    .home__items__img::before {
       position: absolute;
-      background-color: rgba(0, 0, 0, 0.5);
-      content: '';
-      width: 100%;
-      height: 100%;
-      top: 0;
-      z-index: 1; }
-    .home__items__img--1::after {
-      position: absolute;
+      background-image: url("img/ola.svg");
       content: '';
       width: 100%;
       height: 100%;
       background-repeat: no-repeat;
-      background-position: center center;
-      z-index: 2;
-      opacity: .5;
-      background-image: url("img/icon-01.png"); }
-  .home__items__img--2 {
-    background-image: url("img/servicio-02.jpg"); }
-    .home__items__img--2::before {
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.5);
-      content: '';
-      width: 100%;
-      height: 100%;
-      top: 0;
-      z-index: 1; }
-    .home__items__img--2::after {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: center center;
-      z-index: 2;
-      opacity: .5;
-      background-image: url("img/icon-02.png"); }
-  .home__items__img--3 {
-    background-image: url("img/servicio-03.jpg"); }
-    .home__items__img--3::before {
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.5);
-      content: '';
-      width: 100%;
-      height: 100%;
-      top: 0;
-      z-index: 1; }
-    .home__items__img--3::after {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: center center;
-      z-index: 2;
-      opacity: .5;
-      background-image: url("img/icon-03.png"); }
-  .home__items__img--4 {
-    background-image: url("img/servicio-04.jpg"); }
-    .home__items__img--4::before {
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.5);
-      content: '';
-      width: 100%;
-      height: 100%;
-      top: 0;
-      z-index: 1; }
-    .home__items__img--4::after {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: center center;
-      z-index: 2;
-      opacity: .5;
-      background-image: url("img/icon-04.png"); }
+      background-position: bottom;
+      background-size: 106%; }
+    .home__items__img::after {
+      -webkit-transition: all ease 1s;
+      -o-transition: all ease 1s;
+      transition: all ease 1s;
+      -webkit-transition: 1s -webkit-transform ease 0s;
+      transition: 1s -webkit-transform ease 0s;
+      -o-transition: 1s transform ease 0s;
+      transition: 1s transform ease 0s;
+      transition: 1s transform ease 0s, 1s -webkit-transform ease 0s; }
+    .home__items__img--1 {
+      background-image: url("img/servicio-01.jpg"); }
+      .home__items__img--1::before {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 1; }
+      .home__items__img--1::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 2;
+        opacity: .5;
+        background-image: url("img/icon-01.png"); }
+    .home__items__img--2 {
+      background-image: url("img/servicio-02.jpg"); }
+      .home__items__img--2::before {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 1; }
+      .home__items__img--2::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 2;
+        opacity: .5;
+        background-image: url("img/icon-02.png"); }
+    .home__items__img--3 {
+      background-image: url("img/servicio-03.jpg"); }
+      .home__items__img--3::before {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 1; }
+      .home__items__img--3::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 2;
+        opacity: .5;
+        background-image: url("img/icon-03.png"); }
+    .home__items__img--4 {
+      background-image: url("img/servicio-04.jpg"); }
+      .home__items__img--4::before {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 1; }
+      .home__items__img--4::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 2;
+        opacity: .5;
+        background-image: url("img/icon-04.png"); }
 
 .pie {
   padding: .5em; }
@@ -258,3 +323,52 @@ a {
     -ms-flex-item-align: center;
     align-self: center;
     padding-right: 2em; }
+
+@media (max-width: 991px) {
+  .header #btnMovil + label {
+    display: block !important;
+    background-color: #FFF;
+    -webkit-box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.8);
+    box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.8);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 15px 15px;
+    position: fixed;
+    bottom: 4rem;
+    z-index: 3;
+    right: 1.5rem;
+    font-size: 2em; }
+    .header #btnMovil + label img {
+      display: block;
+      margin: .1em auto; }
+    .header #btnMovil + label:hover {
+      cursor: pointer; }
+  .header__nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: fixed;
+    width: 150px;
+    right: -50%;
+    z-index: 2;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    bottom: 9rem; }
+    .header__nav ul li {
+      border-right: 0 !important;
+      display: block; }
+      .header__nav ul li:nth-child(1) {
+        border-left: 0 !important; }
+      .header__nav ul li a {
+        padding: 1.25rem !important;
+        text-transform: capitalize !important; }
+  .header #btnMovil:checked ~ ul {
+    background-color: white;
+    cursor: pointer;
+    right: 1rem;
+    -webkit-box-shadow: 2px 4px 40px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 4px 40px 0px rgba(0, 0, 0, 0.7);
+    overflow: auto; } }
