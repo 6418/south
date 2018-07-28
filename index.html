@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://file.myfontastic.com/C2XzwCWfDKsj27Qu4nQF6i/icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="js/jquery.cycle2.min.js"></script>
 </head>
 <body>
 <header class="header">
@@ -49,12 +51,21 @@
     </section>
 </header>
 <main class="home">
-    <div class="home__banner">
-        <h2 class="home__banner__title">
-            <span>Soluciones Logísticas a su Medida</span>
-            SOUTH AGENCIES S.A.C.
-        </h2>
-    </div>
+        <div class="mySlides">
+            <h2 class="mySlides__title">
+                <span>Soluciones Logísticas a su Medida</span>
+                SOUTH AGENCIES S.A.C.
+            </h2>
+            <ul class="cycle-slideshow mySlides__slidercito"
+                data-cycle-fx="fadeout"
+                data-cycle-speed=1200
+                data-cycle-slides="> li"
+                data-cycle-pager=".cycle-pager"
+                data-cycle-timeout=3500>
+                <li style="background-image: url('img/banner-01.jpg');"></li>
+                <li style="background-image: url('img/banner-02.jpg');"></li>
+            </ul>
+        </div>
     <section class="home__services container-fluid">
         <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
