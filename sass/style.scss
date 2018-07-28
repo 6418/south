@@ -70,8 +70,8 @@ a{
     &__phone{
         font-size: 14px;
         @media (max-width:991px){
-            font-size: 1.2em;
-            margin-bottom: 10px;
+            font-size: 1em;
+            margin-bottom: 4px;
         }
     }
     &__email{
@@ -126,6 +126,9 @@ a{
             max-width: 200px;
             text-align: center;
             z-index: 1;
+            @media (max-width:750px){
+                max-width: 100%;
+            }
             span{
                 display: block;
                 font-weight: 300;
@@ -269,6 +272,9 @@ a{
             background-repeat: no-repeat;
             background-position: center center;
             height: 222px;
+            &--height{
+                height: 350px;;
+            }
             &::before{
                 position: absolute;
                 background-image: url('img/ola.svg');
@@ -363,6 +369,9 @@ a{
             font-size: 45px;
             text-shadow: 4px 4px 5px rgba(black, .5);
         }
+        &--services{
+            background-image: url('img/servicio.jpg');
+        }
     }
     &__img{
         display: block;
@@ -374,6 +383,9 @@ a{
         line-height: 2;
         font-size: 16px;
         margin-bottom: 50px;
+        @media (max-width:750px){
+            padding: 0;
+        }
     }
     &__iconsList{
         // margin: 6em 0 0 0;
@@ -411,6 +423,10 @@ a{
             background-size: 105%;
             z-index: 999;
         }
+        @media (max-width:750px){
+            display: block;
+            height: auto;
+        }
     }
     &__50{
         width: 50%;
@@ -427,26 +443,85 @@ a{
                 height: 100%;
                 background-color: rgba(black, .2);
             }
+            @media (max-width:750px){
+                height: 200px;
+            }
         }
         h3{
             font-size: 25px;
             text-align: center;
             margin: 2em 0;
             color: #FFF;
+            @media (max-width:750px){
+                margin: 1em 0;
+            }
         }
         &--text{
             padding: 4em;
             color: #FFF;
             line-height: 2;
+            @media (max-width:750px){
+                padding: 1.5em;
+                text-align: justify;
+            }
         }
+        @media (max-width:750px){
+            width: 100%;
+        }
+    }
+}
+.services{
+    &__title{
+        color: $blue;
+        text-align: center;
+        font-size: 30px;
+    }
+    &__subTitles{
+        color: $blue;
+        font-weight: 400;
+        margin-bottom: 1em;
+    }
+    &__text{
+        padding-left: 4.5em;
+        &--padding{
+            padding-right: 4.5em;
+            @media (max-width:767px){
+                padding: 1em;
+            }
+        }
+        @media (max-width:767px){
+            padding: 1em;
+        }
+    }
+    &__a{
+        display: block;
+        margin-top: 1.5em;
+        color: #FFF !important;
+        text-align: center;
+        padding: .5em 0;
+        background-color: $blue;
+        transition: 1s background-color ease 0s;
+        &:hover{
+            background-color: $black;
+        }
+    }
+    &__items{
+        padding: 3em 0;
+        border-bottom: 1px solid $black;
     }
 }
 .pie{
     padding: 2em;
     background-color: #000;
+    @media (max-width:750px){
+        padding: 1em;
+    }
     .flex{
         display: flex;
         justify-content: space-between;
+        @media (max-width:750px){
+            display: block;
+        }
     }
     &__title{
         font-weight: 400;
@@ -454,10 +529,18 @@ a{
         color: $blue;
         align-self: center;
         padding-left: 2em;
+        @media (max-width:750px){
+            padding: 0;
+            font-size: 25px;
+            text-align: center;
+        }
     }
     &__icons{
         align-self: center;
         padding-right: 2em;
+        @media (max-width:750px){
+            display: none;
+        }
     }
     &__a{
         background-color: $black;
@@ -470,6 +553,10 @@ a{
         transition: 1s background-color ease 0s;
         &:hover{
             background-color: $blue;
+        }
+        @media (max-width:750px){
+            display: block;
+            margin: 1em auto;
         }
     }
 }
@@ -512,13 +599,24 @@ a{
         text-align: center;
         margin-top: 4em;
         a{
-            color: #FFF !important; 
+            color: #FFF !important;
         }
         i{
             display: block;
             color: #FFF;
             text-align: center;
             font-size: 2em;
+            transition: 1s color ease 0s; 
+            &:hover{
+                color: #000;
+            }
+            @media (max-width:750px){
+                text-align: left;
+            }
+        }
+        @media (max-width:750px){
+            text-align: left;
+            margin: 2em 0;
         }
     }
     &__pie{
