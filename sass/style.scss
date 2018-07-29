@@ -511,6 +511,9 @@ a{
     &__items{
         padding: 3em 0;
         border-bottom: 1px solid $black;
+        &:last-child{
+            border-bottom: none;
+        }
     }
 }
 .carga{

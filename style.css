@@ -497,6 +497,8 @@ a {
 .services__items {
   padding: 3em 0;
   border-bottom: 1px solid #474747; }
+  .services__items:last-child {
+    border-bottom: none; }
 
 .carga {
   background-color: #e8e8e8;
