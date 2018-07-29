@@ -407,7 +407,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   background-color: #1988ba;
-  height: 500px; }
+  min-height: 500px; }
   .nosotros__full:before {
     position: absolute;
     content: '';
@@ -589,6 +589,8 @@ a {
 .pie {
   padding: 2em;
   background-color: #000; }
+  .pie--white {
+    background-color: #FFF; }
   @media (max-width: 750px) {
     .pie {
       padding: 1em; } }

@@ -414,7 +414,7 @@ a{
         position: relative;
         display: flex;
         background-color: $blue;
-        height: 500px;
+        min-height: 500px;
         &:before{
             position: absolute;
             content: '';
@@ -616,6 +616,9 @@ a{
 .pie{
     padding: 2em;
     background-color: #000;
+    &--white{
+        background-color: #FFF;
+    }
     @media (max-width:750px){
         padding: 1em;
     }
