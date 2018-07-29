@@ -371,6 +371,8 @@ a {
     text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5); }
   .nosotros__banner--services {
     background-image: url("img/servicio.jpg"); }
+  .nosotros__banner--contacto {
+    background-image: url("img/contacto.jpg"); }
 
 .nosotros__img {
   display: block;
@@ -495,6 +497,35 @@ a {
 .services__items {
   padding: 3em 0;
   border-bottom: 1px solid #474747; }
+
+.contacto__ul li {
+  list-style: none;
+  font-size: 18px;
+  margin-bottom: 2em; }
+
+.contacto__ul h4 {
+  color: #1988ba;
+  font-size: 25px; }
+
+.contacto__form h4 {
+  color: #1988ba;
+  font-size: 25px;
+  text-align: center; }
+
+.contacto__form input, .contacto__form textarea {
+  width: 100%;
+  padding: .5em;
+  margin: .5em 0; }
+
+.contacto__form button {
+  background-color: #1988ba;
+  color: #FFF;
+  width: 100%;
+  border: 0;
+  padding: .5em; }
+
+.contacto__map {
+  margin: 2em 0; }
 
 .pie {
   padding: 2em;
