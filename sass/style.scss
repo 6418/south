@@ -513,6 +513,71 @@ a{
         border-bottom: 1px solid $black;
     }
 }
+.carga{
+    background-color: #e8e8e8;
+    background-image: url('img/carga-internacional.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    min-height: 680px;
+    &--agenciamiento{
+        background-image: url('img/agenciamiento-de-aduanas.png');
+    }
+    &--transporte{
+        background-image: url('img/transporte.png');
+    }
+    &--ferias{
+        background-image: url('img/ferias.png');
+    }
+    &__content{
+        margin-top: 5em;
+        text-align: center;
+        h1{
+            color: $blue;
+            margin-bottom: 1em;
+        }
+        @media (max-width:991px){
+            background-color: rgba(#FFF,.8);
+            padding: 1.5em;
+        }
+    }
+    &__text{
+        line-height: 1.5;
+        text-align: justify;
+    }
+    &__ul{
+        padding: 0 3em;
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        margin-top: 3em;
+    }
+    &__a{
+        display: block;
+        border: 3px solid $blue;
+        padding: 1em 0;
+        font-size: 14px;
+        font-weight: bold;
+        max-width: 250px;
+        margin: 0 auto;
+        margin-top: 4em;
+        transition: 1s background-color ease 0s;
+        &:hover{
+            background-color: $blue;
+            color: #FFF;
+        }
+    }
+}
+.servicesItems{
+    &__others{
+        margin: 4em auto;
+        &__title{
+            color: $blue;
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 1.5em;
+        }
+    }
+}
 .contacto{
     &__ul{
         li{

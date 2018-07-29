@@ -498,6 +498,65 @@ a {
   padding: 3em 0;
   border-bottom: 1px solid #474747; }
 
+.carga {
+  background-color: #e8e8e8;
+  background-image: url("img/carga-internacional.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  min-height: 680px; }
+  .carga--agenciamiento {
+    background-image: url("img/agenciamiento-de-aduanas.png"); }
+  .carga--transporte {
+    background-image: url("img/transporte.png"); }
+  .carga--ferias {
+    background-image: url("img/ferias.png"); }
+  .carga__content {
+    margin-top: 5em;
+    text-align: center; }
+    .carga__content h1 {
+      color: #1988ba;
+      margin-bottom: 1em; }
+    @media (max-width: 991px) {
+      .carga__content {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 1.5em; } }
+  .carga__text {
+    line-height: 1.5;
+    text-align: justify; }
+  .carga__ul {
+    padding: 0 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 3em; }
+  .carga__a {
+    display: block;
+    border: 3px solid #1988ba;
+    padding: 1em 0;
+    font-size: 14px;
+    font-weight: bold;
+    max-width: 250px;
+    margin: 0 auto;
+    margin-top: 4em;
+    -webkit-transition: 1s background-color ease 0s;
+    -o-transition: 1s background-color ease 0s;
+    transition: 1s background-color ease 0s; }
+    .carga__a:hover {
+      background-color: #1988ba;
+      color: #FFF; }
+
+.servicesItems__others {
+  margin: 4em auto; }
+  .servicesItems__others__title {
+    color: #1988ba;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 1.5em; }
+
 .contacto__ul li {
   list-style: none;
   font-size: 18px;
