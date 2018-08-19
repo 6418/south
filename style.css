@@ -18,6 +18,10 @@ a {
   top: .14em;
   margin-right: .3em; }
 
+.sin-padding {
+  padding-right: 0;
+  padding-left: 0; }
+
 .header {
   position: relative; }
   .header__top {
@@ -139,22 +143,22 @@ a {
           .header__nav ul li a:hover {
             color: #474747; }
 
-.home .mySlides {
+.mySlides {
   height: 70vh;
   position: relative;
   width: 100%;
   z-index: -1; }
-  .home .mySlides__slidercito {
+  .mySlides__slidercito {
     position: absolute;
     width: 100%;
     height: 100%; }
-    .home .mySlides__slidercito li {
+    .mySlides__slidercito li {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
       height: 100%;
       width: 100%; }
-  .home .mySlides::before {
+  .mySlides::before {
     position: absolute;
     background-image: url("img/ola.svg");
     bottom: 0;
@@ -165,7 +169,7 @@ a {
     background-position: bottom;
     background-size: 105%;
     z-index: 992; }
-  .home .mySlides::after {
+  .mySlides::after {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.2);
     content: '';
@@ -173,7 +177,7 @@ a {
     height: 100%;
     top: 0;
     z-index: 991; }
-  .home .mySlides__title {
+  .mySlides__title {
     position: absolute;
     max-width: 650px;
     font-size: 50px;
@@ -182,21 +186,21 @@ a {
     z-index: 992;
     text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5); }
     @media (max-width: 990px) {
-      .home .mySlides__title {
+      .mySlides__title {
         font-size: 45px;
         padding: 100px 0 0 50px; } }
     @media (max-width: 600px) {
-      .home .mySlides__title {
+      .mySlides__title {
         font-size: 25px;
         padding: 100px 0 0 50px; } }
-    .home .mySlides__title span {
+    .mySlides__title span {
       display: block;
       font-size: 30px; }
       @media (max-width: 610px) {
-        .home .mySlides__title span {
+        .mySlides__title span {
           font-size: 30px; } }
       @media (max-width: 768px) {
-        .home .mySlides__title span {
+        .mySlides__title span {
           font-size: 16px; } }
 
 .duty {
@@ -510,32 +514,25 @@ a {
   .services__items:last-child {
     border-bottom: none; }
 
-.carga {
+.service-item {
   background-color: #e8e8e8;
-  background-image: url("img/carga-internacional.png");
   background-repeat: no-repeat;
-  background-position: left center;
-  min-height: 680px; }
-  .carga--agenciamiento {
-    background-image: url("img/agenciamiento-de-aduanas.png"); }
-  .carga--transporte {
-    background-image: url("img/transporte.png"); }
-  .carga--ferias {
-    background-image: url("img/ferias.png"); }
-  .carga__content {
-    margin-top: 5em;
-    text-align: center; }
-    .carga__content h1 {
+  background-position: left center; }
+  .service-item__content {
+    padding-top: 5em;
+    text-align: center;
+    max-width: 550px; }
+    .service-item__content h1 {
       color: #1988ba;
       margin-bottom: 1em; }
     @media (max-width: 991px) {
-      .carga__content {
+      .service-item__content {
         background-color: rgba(255, 255, 255, 0.8);
         padding: 1.5em; } }
-  .carga__text {
+  .service-item__text {
     line-height: 1.5;
     text-align: justify; }
-  .carga__ul {
+  .service-item__ul {
     padding: 0 3em;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -545,7 +542,7 @@ a {
     -ms-flex-pack: justify;
     justify-content: space-between;
     margin-top: 3em; }
-  .carga__a {
+  .service-item__a {
     display: block;
     border: 3px solid #1988ba;
     padding: 1em 0;
@@ -556,8 +553,9 @@ a {
     margin-top: 4em;
     -webkit-transition: 1s background-color ease 0s;
     -o-transition: 1s background-color ease 0s;
-    transition: 1s background-color ease 0s; }
-    .carga__a:hover {
+    transition: 1s background-color ease 0s;
+    color: #1988ba; }
+    .service-item__a:hover {
       background-color: #1988ba;
       color: #FFF; }
 
@@ -596,6 +594,9 @@ a {
 .foot {
   padding: 2em;
   background-color: #000; }
+  @media (max-width: 1280px) {
+    .foot {
+      padding: 0; } }
   .foot--white {
     background-color: #FFF; }
   @media (max-width: 750px) {
